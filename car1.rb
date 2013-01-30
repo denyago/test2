@@ -45,7 +45,8 @@ Car.new(:engine => :gas, :size => 1.6).engine_info#=> 1.6 gas engine
 
 #Car.new(asdasd: true) #=>should fail
 
-Car.new(engine: :disel, size: 2, turbo: true).engine_info# => "Turbo disel engine 2.0"
+Car.new(engine: :disel, size: 2, turbo: true).engine_info
+# => "Turbo disel engine 2.0"
 =begin
 a = Car.new do 
 	self.engine= :disel
