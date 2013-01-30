@@ -4,7 +4,7 @@ class Car
 	attr_accessor :engine, :size, :turbo || false
 
 	def initialize(opt={})
-		opt.each_with_index do |(attr,val),index|
+		opt.each do |attr, val|
 			if @engine=="" || @size == ""
 				raise "WTF? What do you put there?"
 			else
