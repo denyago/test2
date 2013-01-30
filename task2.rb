@@ -36,4 +36,7 @@ puts "2) root URLs: #{root_urls(some_text).join(', ')}"
 puts "3) longest number: #{longest_number(some_text)}"
 puts "4) words statistics: #{words_stats(words)}"
 
-
+p some_text.scan(/\w+/).sort_by(&:length).last
+p some_text.scan /https?:\/\/[\w\.\-]+/
+p some_text.scan(/\d+/).sort_by(&:length).last
+p some_text.scan(/\w+/).group_by(&:downcase).map {|k,v| [k, v.length]}
