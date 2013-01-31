@@ -1,6 +1,5 @@
-# encoding: utf-8
-
 class Car
+
   ALLOWED = [:engine, :size, :turbo]
 
   def initialize(args = {}, &block)
@@ -11,37 +10,43 @@ class Car
     end
   end
 
-  def method_missing name, *args, &block
+  def method_missing(name, *args)
     name = name.to_s
     name.chop! if name =~ /=$/
     if ALLOWED.include? name.to_sym
-      self.class.send(:define_method, name, proc { attr_accessor name.to_sym} )
       instance_variable_set("@#{name}", args[0])
+      self.class.send(:define_method, "#{name}=") { |arg| instance_variable_set("@#{name}", arg) }
+      self.class.send(:define_method, name) { instance_variable_get("@#{name}") }
     else
       super
     end
   end
 
   def engine_info
+    raise 'car is failed' if instance_variables.empty?
     puts "#{'Turbo ' if @turbo}#{@size.to_f} #{@engine} engine".capitalize
   end
 end
 
-
-a = Car.new; a.engine = :disel; a.size = 1.6
-a.engine #=> disel
-a.size #=>1.6
-a.engine_info #=>"1.6 disel engine"
-Car.new(:engine => :gas, :size => 1.6).engine_info#=> 1.6 gas engine
-Car.new.engine_info #=> should fail
-Car.new(asdasd: true) #=>should fail
-Car.new(engine: :disel, size: 2, turbo: true).engine_info # => "Turbo disel engine 2.0"
-a = Car.new do 
-	self.engine= :disel
-	self.size= 3
-end
-a = Car.new do
-	engine :diesel
-	size 3
-end
-a.engine_info	#=> "3.0 disel engine"
+#a = Car.new
+#a.engine = :diesel
+#a.size = 1.6
+#p a.engine #should return :diesel
+#p a.size #should return 1.6
+#a.engine_info #should print "1.6 Diesel engine"
+#Car.new(:engine => :gas, :size => 1.6).engine_info
+#should print "1.6 Gas engine"
+#Car.new.engine_info #should fail
+#Car.new(asdasd: true) #should fail
+#Car.new(engine: :diesel, size: 2, turbo: true).engine_info
+#prints "Turbo diesel engine 2.0"
+#a = Car.new do
+#  self.engine= :diesel
+#  self.size= 3
+#end
+#a.engine_info #prints "3.0 Diesel engine"
+#a = Car.new do
+#  engine :diesel
+#  size 3
+#end
+#a.engine_info

@@ -1,0 +1,24 @@
+- Why have you decided to hold the Ruby courses?
+
+There are lot open education programs nowadays, they appears in different minds, countries, universities. There are many online courses, videos and non-certificate-granting programs, including edX, MITx, Harvardx, Coursera, Udacity... I'm glad that every coach or student of our course finished at least few of them.  But real learning is different: when you live listen coach, can ask him a question, interacts with other people - that instirate you much more and more effectively.
+
+- What format do you held the courses in?
+
+It's the second iteration of the course in Kiev and we changed a lot from the first one. The are not only lections and homework assignments now, we added lot of practice in class. We meets two times in a week and it is usually one lection and one practice and lot of homework an home reading.
+
+- Is there a lot of visitors? And are they mostly skilled Ruby developers who wants to improve their knowledge or people who just get acquainted with it?
+
+More than we expect :) 40 people in the group, approximately 30 people on every lesson plus 5 coaches. 
+The course was designed for web developers who’s willing to programme on Ruby and Ruby on Rails. And mostly we have web developers that want to learn Ruby, but there are some skilled Ruby developers too.
+
+- Do you plan to hold the seminars on a regulary basis? How often?
+
+Yes. We plan to making seminars once in a two week. There are lot of topics that we want to share and people who finished the course and want to keep moving and who just passionate in Ruby, programming...
+
+- What are you plan for the future of the course? What about creating the own Ruby school? 
+
+This is suggestion? :) Besides the knowledge it's lot of positive emotions that course give's to everybody. But it's lots of work too. 
+
+- Thank you!
+
+You're welcome.
