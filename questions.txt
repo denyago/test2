@@ -9,7 +9,8 @@ The are not only lections and homework assignments now, we added lot of practice
 We meets two times in a week and it is usually one lection and one practice and lot of
 homework an home reading.
 
-- Is there a lot of visitors? And are they mostly skilled Ruby developers who wants to improve their knowledge or people who just get acquainted with it?
+- Is there a lot of visitors? And are they mostly skilled Ruby developers who wants to
+improve their knowledge or people who just get acquainted with it?
 
 More than we expect :) 40 people in the group, approximately 30 people on every lesson
 plus 5 coaches. 
