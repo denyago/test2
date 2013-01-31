@@ -3,7 +3,12 @@ class Car
 	
 	attr_accessor :engine, :size, :turbo || false
 
-	def initialize(opt={})
+	def initialize(opt={}, &block)
+		if block_given?
+		#	yield
+		instance_eval &block
+		puts "Fuck - we have block"
+		else
 		opt.each do |attr, val|
 			if @engine=="" || @size == ""
 				raise "WTF? What do you put there?"
@@ -11,6 +16,7 @@ class Car
 				send("#{attr}=", val)
 			end
 		end
+	end
 	end
 
 	def engine
@@ -24,12 +30,10 @@ class Car
 	def engine_info
 			if @engine.nil? || @size.nil?
       	raise "Not enough parameters"
-
- 			elsif @turbo == true
- 				puts "Turbo #{@engine} #{@size.to_f} #{@turbo}"
-
-      else
-	 			puts "#{@size} #{@engine.capitalize} engine #{@turbo}"
+ 			elsif @turbo
+ 				puts "Turbo #{@engine} #{@size.to_f}"
+			else
+				puts "#{@size} #{@engine.capitalize} engine"
 	  	end
 	end
 end
@@ -45,18 +49,16 @@ Car.new(:engine => :gas, :size => 1.6).engine_info#=> 1.6 gas engine
 
 #Car.new(asdasd: true) #=>should fail
 
-Car.new(engine: :disel, size: 2, turbo: true).engine_info
-# => "Turbo disel engine 2.0"
-=begin
+Car.new(engine: :disel, size: 2, turbo: true).engine_info# => "Turbo disel engine 2.0"
+
 a = Car.new do 
 	self.engine= :disel
 	self.size= 3
 end
-=end
-#a.engine_info	#=> "3.0 disel engine"
-=begin
-a = Car.new do
-   engine :diesel
-   size 3
-end
-=end
+
+a.engine_info	#=> "3.0 disel engine"
+
+#a = Car.new do
+#   engine :diesel
+#   size 3
+#end
