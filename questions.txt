@@ -1,6 +1,11 @@
 - Why have you decided to hold the Ruby courses?
 
-There are lot open education programs nowadays, they appears in different minds, countries, universities. There are many online courses, videos and non-certificate-granting programs, including edX, MITx, Harvardx, Coursera, Udacity... I'm glad that every coach or student of our course finished at least few of them.  But real learning is different: when you live listen coach, can ask him a question, interacts with other people - that instirate you much more and more effectively.
+There are lot open education programs nowadays, they appears in different minds,
+countries, universities. There are many online courses, videos and non-certificate-
+granting programs, including edX, MITx, Harvardx, Coursera, Udacity... I'm glad that every
+coach or student of our course finished at least few of them.  But real learning is
+different: when you live listen coach, can ask him a question, interacts with other people
+- that instirate you much more and more effectively.
 
 - What format do you held the courses in?
 
